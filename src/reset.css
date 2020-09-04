@@ -1,0 +1,39 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+button,
+[type = 'submit'] {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}   
+
+ol,
+ul {
+    list-style: none;
+}
+
+p {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+code {
+    font-family: 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
