@@ -39,12 +39,17 @@
     padding: 15px 20px;
     margin: 30px auto;
     transition: all 0.3s;
+    box-shadow: 3px 3px 10px #11111177;
 }
 
 .login-button:hover {
-    background-color: #eaeaea;
+    background-color: #ededed;
+    box-shadow: 3px 3px 15px #111111aa;
 }
 
+.login-button:active {
+    background-color: #aaa;
+}
 .login-button img {
     width: 43px;
 }
