@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import queryString from 'query-string'
+import axios from 'axios'
+
 import './App.css';
 
 function App() {
+  const [playlists, setPlaylists] = useState("")
+  const [token, setToken] = useState("")
+  useEffect(() => {
+    setToken(queryString.parse(window.location.search).access_token) 
+  }, [])
+
+  useEffect(() => {
+    axios.get(
+      "https://api.spotify.com/v1/me",
+      { headers: { "Authorization": 'Bearer ' + token } }
+      )
+      .then(res => {
+        console.log(res)
+      })
+  }, [token])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{token}</h1>
     </div>
   );
 }
