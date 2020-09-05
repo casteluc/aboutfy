@@ -6,7 +6,7 @@
     justify-content: center;
 
     height: 100vh;
-    max-width: 560px;
+    max-width: 620px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -20,7 +20,7 @@
     color: #fafafa;
     font-size: 1.875rem;
     margin-bottom: 10px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 /* ------------------------- LOGIN BUTTON ----------------------------- */
@@ -57,4 +57,5 @@
 .login-button h3 {
     font-size: 1.5rem;
     text-align: center;
+    font-weight: 600;
 }
