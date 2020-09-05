@@ -4,11 +4,12 @@ import queryString from 'query-string'
 import Login from './pages/Login/Login';
 
 import './App.css';
-import { getCurrentUser } from './services/getUser';
+import { getCurrentUser, getTopSongs } from './services/apiServices';
 
 function App() {
   const [token, setToken] = useState(false)
   const [user, setUser] = useState({})
+  const [topSongs, setTopSongs] = useState([])
 
   useEffect(() => {
     let parsed = queryString.parse(window.location.search)
@@ -20,6 +21,12 @@ function App() {
       getCurrentUser(setUser, token)
     }
   }, [token])
+
+  useEffect(() => {
+    if (user && token) {
+      getTopSongs(user, token, setTopSongs)
+    }
+  }, [user])
 
   return (
     <div className="app">
