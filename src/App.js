@@ -1,18 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import queryString from 'query-string'
-import './App.css';
+
 import Login from './pages/Login/Login';
 
+import './App.css';
+import { getCurrentUser } from './services/getUser';
+
 function App() {
-  const [accessToken, setAccessToken] = useState(false)
+  const [token, setToken] = useState(false)
+  const [user, setUser] = useState({})
+
   useEffect(() => {
     let parsed = queryString.parse(window.location.search)
-    setAccessToken(parsed.access_token)
+    setToken(parsed.access_token)
   }, [])
+
+  useEffect(() => {
+    if (token) {
+      getCurrentUser(setUser, token)
+    }
+  }, [token])
 
   return (
     <div className="app">
-      {accessToken ?  <h1>Teste</h1> : <Login />}
+      {token ?  <h1>Teste</h1> : <Login />}
+      <h1>{user.id}</h1>
     </div>    
   );
 }
