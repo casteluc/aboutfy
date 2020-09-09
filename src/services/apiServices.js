@@ -24,9 +24,9 @@ export function getTopSongs(user, token, setTopSongs) {
         }
     }
 
-    app.get("/me/top/artists", axiosConfig)
+    app.get("/me/top/tracks", axiosConfig)
         .then( response => {
-            console.log(response)
+            console.log(response.data)
             setTopSongs(response.data)
     })
 }
