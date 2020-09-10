@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
 import Footer from '../../components/Footer/Footer'
-import TopArtists from '../../components/TopInfo/TopArtists/TopArtists'
-import TopTracks from '../../components/TopInfo/TopTracks/TopTracks'
-import TopGenres from '../../components/TopInfo/TopGenres/TopGenres'
-import UserInfo from '../../components/TopInfo/UserInfo/UserInfo'
+import TopArtists from '../../components/InfoShow/TopArtists/TopArtists'
+import TopTracks from '../../components/InfoShow/TopTracks/TopTracks'
+import TopGenres from '../../components/InfoShow/TopGenres/TopGenres'
+import UserInfo from '../../components/InfoShow/UserInfo/UserInfo'
 
-import "./TopInfo.css"
+import "./InfoShow.css"
 
 export default props => {
     const [infoType, setInfoType] = useState("tracks")

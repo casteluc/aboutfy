@@ -1,0 +1,17 @@
+.top-artists {
+    margin: 20px 0;
+}
+
+.top-artists > p {
+    color: #fafafa;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+@media only screen and (max-width: 480px) {
+    .top-artists > p {
+        font-size: 1.125rem;
+    }
+}
