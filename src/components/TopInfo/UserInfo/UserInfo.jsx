@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { getCurrentUser } from '../../../services/apiServices'
 
+import './UserInfo.css'
+
 export default props => {
     const [profileImageURL, setProfileImageURL] = useState("")
     const [user, setUser] = useState({})
