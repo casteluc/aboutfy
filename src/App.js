@@ -15,12 +15,6 @@ function App() {
     setToken(parsed.access_token)
   }, [])
 
-  useEffect(() => {
-    if (token) {
-      getTopArtists(token)
-    }
-  }, [token])
-
   return (
     <div className="app">
       {token ?  <TopInfo token={token} /> : <Login />}

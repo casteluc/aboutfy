@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { getTopTracks } from '../../../services/apiServices'
+
+import SingleTrack from './SingleTrack'
 
 import './TopTracks.css'
-import { getTopTracks } from '../../../services/apiServices'
-import SingleTrack from './SingleTrack'
 
 export default props => {
     const [topTracks, setTopTracks] = useState([])

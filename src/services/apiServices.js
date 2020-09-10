@@ -45,7 +45,7 @@ export function getTopArtists(token, setTopArtists) {
 
     app.get(`/me/top/artists?time_range=${timeRange}&limit=${limit}`, axiosConfig)
         .then( response => {
-            console.log(response.data)
-            // setTopArtists(response.data)
+            setTopArtists(response.data.items)
+            console.log(response.data.items)
     })
 }
