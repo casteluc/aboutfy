@@ -13,6 +13,7 @@ export function getCurrentUser(setUser, token) {
 
     app.get("/me", axiosConfig)
         .then( response => {
+            console.log(response.data)
             setUser(response.data)
         })
 }

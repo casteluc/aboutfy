@@ -5,6 +5,7 @@ import Login from './pages/Login/Login';
 
 import './App.css';
 import { getCurrentUser, getTopSongs } from './services/apiServices';
+import TopInfo from './pages/TopInfo/TopInfo';
 
 function App() {
   const [token, setToken] = useState(false)
@@ -30,8 +31,7 @@ function App() {
 
   return (
     <div className="app">
-      {token ?  <h1>Teste</h1> : <Login />}
-      <h1>{user.id}</h1>
+      {token ?  <TopInfo user={user} token={token} /> : <Login />}
     </div>    
   );
 }
