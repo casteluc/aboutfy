@@ -11,7 +11,6 @@ export function getCurrentUser(token, setUser) {
         }
     }
 
-    console.log(token)
     app.get("/me", axiosConfig)
         .then( response => {
             setUser(response.data)
@@ -28,6 +27,6 @@ export function getTopTracks(token, setTopTracks) {
     app.get("/me/top/tracks", axiosConfig)
         .then( response => {
             console.log(response.data)
-            setTopTracks(response.data)
+            setTopTracks(response.data.items)
     })
 }
