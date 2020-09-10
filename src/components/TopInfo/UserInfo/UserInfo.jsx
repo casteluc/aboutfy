@@ -11,7 +11,12 @@ export default props => {
 
     return (
         <div className="user-info">
-            <img src={profileImageURL} alt=""/>
+            <img src={profileImageURL} alt="imagem do usuário do spotify"/>
+            
+            <div>
+                <p className="user-name">{props.user.display_name}</p>
+                <p className="user-id">{props.user.id}</p>
+            </div>
         </div>
     )
 }
