@@ -25,7 +25,7 @@ export default props => {
             
             <div>
                 <p className="user-name">{user.display_name}</p>
-                <p className="user-id">{user.id}</p>
+                <p className="user-id">@{user.id}</p>
             </div>
         </div>
     )
