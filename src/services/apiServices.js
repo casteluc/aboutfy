@@ -29,7 +29,23 @@ export function getTopTracks(token, setTopTracks) {
 
     app.get(`/me/top/tracks?time_range=${timeRange}&limit=${limit}`, axiosConfig)
         .then( response => {
-            console.log(response.data)
             setTopTracks(response.data.items)
+    })
+}
+
+export function getTopArtists(token, setTopArtists) {
+    let axiosConfig = {
+        "headers": {
+            "Authorization": 'Bearer ' + token
+        }
+    }
+
+    let timeRange = "medium_term"
+    let limit = 5
+
+    app.get(`/me/top/artists?time_range=${timeRange}&limit=${limit}`, axiosConfig)
+        .then( response => {
+            console.log(response.data)
+            // setTopArtists(response.data)
     })
 }
