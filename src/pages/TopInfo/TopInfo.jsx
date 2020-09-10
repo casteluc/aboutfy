@@ -18,11 +18,11 @@ export default props => {
     return (
         <div className="top-info">
             <div className="top-info-container">
-                <UserInfo user={props.user}/>
+                <UserInfo token={props.token}/>
 
-                {infoType === "tracks" ? <TopTracks /> : null}
-                {infoType === "artists" ? <TopArtists /> : null}
-                {infoType === "genres" ? <TopGenres /> : null}
+                {infoType === "tracks" ? <TopTracks token={props.token} user={props.user}/> : null}
+                {infoType === "artists" ? <TopArtists token={props.token} user={props.user}/> : null}
+                {infoType === "genres" ? <TopGenres token={props.token} user={props.user}/> : null}
                 
                 <div className="info-type-buttons">
                     <button className="info-type-button" name="tracks" onClick={changeInfoType}>

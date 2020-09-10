@@ -4,21 +4,21 @@ const app = axios.create({
     baseURL: "https://api.spotify.com/v1/"
 })
 
-export function getCurrentUser(setUser, token) {
+export function getCurrentUser(token, setUser) {
     let axiosConfig = {
         "headers": {
             "Authorization": 'Bearer ' + token
         }
     }
 
+    console.log(token)
     app.get("/me", axiosConfig)
         .then( response => {
-            console.log(response.data)
             setUser(response.data)
         })
 }
 
-export function getTopSongs(user, token, setTopSongs) {
+export function getTopTracks(token, setTopTracks) {
     let axiosConfig = {
         "headers": {
             "Authorization": 'Bearer ' + token
@@ -27,7 +27,7 @@ export function getTopSongs(user, token, setTopSongs) {
 
     app.get("/me/top/tracks", axiosConfig)
         .then( response => {
-            // console.log(response.data)
-            setTopSongs(response.data)
+            console.log(response.data)
+            setTopTracks(response.data)
     })
 }
