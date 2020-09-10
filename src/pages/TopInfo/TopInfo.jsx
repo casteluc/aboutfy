@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Footer from '../../components/Footer/Footer'
 import TopArtists from '../../components/TopInfo/TopArtists/TopArtists'
 import TopTracks from '../../components/TopInfo/TopTracks/TopTracks'
 import TopGenres from '../../components/TopInfo/TopGenres/TopGenres'
+import UserInfo from '../../components/TopInfo/UserInfo/UserInfo'
 
 import "./TopInfo.css"
 
@@ -12,13 +13,12 @@ export default props => {
 
     const changeInfoType = (e) => {
         setInfoType(e.target.name)
-        console.log(infoType)
     }
 
     return (
         <div className="top-info">
             <div className="top-info-container">
-                {/* <UserInfo user={props.user}/> */}
+                <UserInfo user={props.user}/>
 
                 {infoType === "tracks" ? <TopTracks /> : null}
                 {infoType === "artists" ? <TopArtists /> : null}
