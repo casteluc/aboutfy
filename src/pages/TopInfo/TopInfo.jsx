@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 
-import "./TopInfo.css"
 import Footer from '../../components/Footer/Footer'
-import TopTracks from '../TopTracks/TopTracks'
+import TopArtists from '../../components/TopInfo/TopArtists/TopArtists'
+import TopTracks from '../../components/TopInfo/TopTracks/TopTracks'
+import TopGenres from '../../components/TopInfo/TopGenres/TopGenres'
+
+import "./TopInfo.css"
 
 export default props => {
     const [infoType, setInfoType] = useState("tracks")
@@ -14,24 +17,20 @@ export default props => {
     return (
         <div className="top-info">
             <div className="top-info-container">
-                <UserInfo user={props.user}/>
+                {/* <UserInfo user={props.user}/> */}
                 
-                <div>
-                    <p>As músicas que eu mais escutei na quarentena:</p>
-
-                    {() => {
-                        switch (infoType) {
-                            case "tracks":
-                                return <TopTracks />
-                            case "artists":
-                                return <TopArtists />
-                            case "genre":
-                                return <TopGenres />
-                            default: 
-                        }
-                    }}
-                </div>
-
+                {() => {
+                    switch (infoType) {
+                        case "tracks":
+                            return <TopTracks />
+                        case "artists":
+                            return <TopArtists />
+                        case "genres":
+                            return <TopGenres />
+                        default: 
+                    }
+                }}
+                
                 <div className="info-type-buttons">
                     <button className="info-type-button" infoType="tracks" onClick={changeInfoType}>
                         Ver por músicas
@@ -41,7 +40,7 @@ export default props => {
                         Ver por artistas
                     </button>
 
-                    <button className="info-type-button" infoType="genre" onClick={changeInfoType}>
+                    <button className="info-type-button" infoType="genres" onClick={changeInfoType}>
                         Ver por gênero
                     </button>
                 </div>
