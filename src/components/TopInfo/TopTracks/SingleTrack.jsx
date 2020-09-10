@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import './SingleTrack.css'
+
 export default props => {
     const trackImageURL = props.track.album.images[0].url
     const trackName = props.track.name

@@ -1,0 +1,31 @@
+.single-track {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px 0;
+    box-shadow: 2px 2px 7px #444;
+}
+
+.single-track > p {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 10px;
+    width: 30px;
+}
+
+.single-track img {
+    width: 55px;
+    border-radius: 5px;
+}
+
+.single-track > div {
+    margin: 0 10px;
+    font-size: 1.125rem;
+}
+
+.single-track > div :first-of-type {
+    font-weight: 700;
+}

@@ -1,15 +1,16 @@
 .user-info {
     background-color: rgb(34, 34, 34, 0.2);
     width: 100%;
+    max-width: 540px;
     display: flex;
     align-items: center;
     border-radius: 5px;
 }
 
 .user-info img {
-    width: 85px;
-    border-radius: 13px;
-    padding: 10px;
+    width: 65px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .user-info > div {
