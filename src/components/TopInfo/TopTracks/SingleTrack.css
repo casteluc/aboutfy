@@ -9,7 +9,7 @@
 }
 
 .single-track > p {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
     margin: 0 10px;
@@ -23,9 +23,27 @@
 
 .single-track > div {
     margin: 0 10px;
-    font-size: 1.125rem;
 }
 
 .single-track > div :first-of-type {
+    font-size: 1.125rem;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 480px) {
+    .single-track > p {
+        font-size: 1.125rem;
+    }
+    
+    .single-track > div :first-of-type {
+        font-size: 0.875rem;
+    }
+
+    .single-track > div :last-of-type {
+        font-size: 0.75rem;
+    }
+
+    .single-track img {
+        width: 35px;
+    }
 }

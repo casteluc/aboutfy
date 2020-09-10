@@ -1,5 +1,5 @@
 .top-tracks {
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .top-tracks > p {
@@ -7,4 +7,11 @@
     font-size: 1.5em;
     text-align: center;
     font-weight: 700;
+    transition: all 0.3s;
+}
+
+@media only screen and (max-width: 480px) {
+    .top-tracks > p {
+        font-size: 1.125rem;
+    }
 }
