@@ -7,3 +7,28 @@
     align-items: center;
     justify-content: center;
 }
+
+.info-type-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-type-button {
+    font-size: 0.875rem;
+    color: #222;
+    width: 150px;
+    padding: 5px 0;
+    border-radius: 50px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    margin: 0 5px 10px 5px;
+}
+
+@media only screen and (max-width: 480px) {
+    .info-type-button {
+        font-size: 0.75em;
+        width: 120px;
+    }
+}
