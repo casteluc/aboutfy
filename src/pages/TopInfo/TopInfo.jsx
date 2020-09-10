@@ -11,36 +11,29 @@ export default props => {
     const [infoType, setInfoType] = useState("tracks")
 
     const changeInfoType = (e) => {
-        setInfoType(e.target.infoType)    
+        setInfoType(e.target.name)
+        console.log(infoType)
     }
 
     return (
         <div className="top-info">
             <div className="top-info-container">
                 {/* <UserInfo user={props.user}/> */}
-                
-                {() => {
-                    switch (infoType) {
-                        case "tracks":
-                            return <TopTracks />
-                        case "artists":
-                            return <TopArtists />
-                        case "genres":
-                            return <TopGenres />
-                        default: 
-                    }
-                }}
+
+                {infoType === "tracks" ? <TopTracks /> : null}
+                {infoType === "artists" ? <TopArtists /> : null}
+                {infoType === "genres" ? <TopGenres /> : null}
                 
                 <div className="info-type-buttons">
-                    <button className="info-type-button" infoType="tracks" onClick={changeInfoType}>
+                    <button className="info-type-button" name="tracks" onClick={changeInfoType}>
                         Ver por músicas
                     </button>
 
-                    <button className="info-type-button" infoType="artists" onClick={changeInfoType}>
+                    <button className="info-type-button" name="artists" onClick={changeInfoType}>
                         Ver por artistas
                     </button>
 
-                    <button className="info-type-button" infoType="genres" onClick={changeInfoType}>
+                    <button className="info-type-button" name="genres" onClick={changeInfoType}>
                         Ver por gênero
                     </button>
                 </div>
