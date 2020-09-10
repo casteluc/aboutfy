@@ -24,7 +24,10 @@ export function getTopTracks(token, setTopTracks) {
         }
     }
 
-    app.get("/me/top/tracks", axiosConfig)
+    let timeRange = "medium_term"
+    let limit = 5
+
+    app.get(`/me/top/tracks?time_range=${timeRange}&limit=${limit}`, axiosConfig)
         .then( response => {
             console.log(response.data)
             setTopTracks(response.data.items)
