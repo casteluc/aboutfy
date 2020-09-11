@@ -7,18 +7,18 @@ import InfoShow from './pages/InfoShow/InfoShow';
 import './App.css';
 
 function App() {
-  const [token, setToken] = useState(false)
+    const [token, setToken] = useState(false)
+            
+    useEffect(() => {
+        let parsed = queryString.parse(window.location.search)
+        setToken(parsed.access_token)
+    }, [])
 
-  useEffect(() => {
-    let parsed = queryString.parse(window.location.search)
-    setToken(parsed.access_token)
-  }, [])
-
-  return (
-    <div className="app">
-      {token ?  <InfoShow token={token} /> : <Login />}
-    </div>    
-  );
+    return (
+        <div className="app">
+            {token ?  <InfoShow token={token} /> : <Login />}
+        </div>    
+    );
 }
 
 export default App;

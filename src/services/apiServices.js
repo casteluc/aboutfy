@@ -49,3 +49,20 @@ export function getTopArtists(token, setTopArtists) {
             console.log(response.data.items)
     })
 }
+
+export function getAllTracks(token, setAllTracks) {
+    let axiosConfig = {
+        "headers": {
+            "Authorization": 'Bearer ' + token
+        }
+    }
+
+    let timeRange = "medium_term"
+    let limit = 50
+
+    app.get(`/me/top/tracks?time_range=${timeRange}&limit=${limit}`, axiosConfig)
+        .then( response => {
+            setAllTracks(response.data.items)
+            console.log(response.data.items)
+    })
+}

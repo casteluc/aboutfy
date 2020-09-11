@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import Footer from '../../components/Footer/Footer'
 import TopArtists from '../../components/InfoShow/TopArtists/TopArtists'
 import TopTracks from '../../components/InfoShow/TopTracks/TopTracks'
-import TopGenres from '../../components/InfoShow/TopGenres/TopGenres'
 import UserInfo from '../../components/InfoShow/UserInfo/UserInfo'
 
 import "./InfoShow.css"
@@ -22,7 +21,6 @@ export default props => {
 
                 {infoType === "tracks" ? <TopTracks token={props.token} /> : null}
                 {infoType === "artists" ? <TopArtists token={props.token} /> : null}
-                {infoType === "genres" ? <TopGenres token={props.token} /> : null}
                 
                 <div className="info-type-buttons">
                     <button className="info-type-button" name="tracks" onClick={changeInfoType}>
@@ -31,10 +29,6 @@ export default props => {
 
                     <button className="info-type-button" name="artists" onClick={changeInfoType}>
                         Ver por artistas
-                    </button>
-
-                    <button className="info-type-button" name="genres" onClick={changeInfoType}>
-                        Ver por gênero
                     </button>
                 </div>
             </div>
