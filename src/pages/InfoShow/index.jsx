@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
-import Footer from '../../components/Footer/Footer'
-import TopArtists from '../../components/InfoShow/TopArtists/TopArtists'
-import TopTracks from '../../components/InfoShow/TopTracks/TopTracks'
-import UserInfo from '../../components/InfoShow/UserInfo/UserInfo'
+import Footer from '../../components/Footer/index'
+import TopArtists from '../../components/InfoShow/TopArtists/index'
+import TopTracks from '../../components/InfoShow/TopTracks/index'
+import UserInfo from '../../components/InfoShow/UserInfo/index'
 
 import "./InfoShow.css"
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import queryString from 'query-string'
 
-import Login from './pages/Login/Login';
-import InfoShow from './pages/InfoShow/InfoShow';
+import Login from './pages/Login/index';
+import InfoShow from './pages/InfoShow/index';
 
 import './App.css';
 

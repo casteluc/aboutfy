@@ -1,10 +1,10 @@
 import React from 'react'
 
-import LoginText from '../../components/Login/LoginText'
-import LoginButton from '../../components/Login/LoginButton'
+import LoginText from '../../components/Login/LoginText/index'
+import LoginButton from '../../components/Login/LoginButton/index'
+import Footer from '../../components/Footer/index'
 
 import "./Login.css"
-import Footer from '../../components/Footer/Footer'
 
 export default props => {
 

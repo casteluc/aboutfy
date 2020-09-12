@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getTopTracks } from '../../../services/apiServices'
 
-import SingleTrack from './SingleTrack'
+import SingleTrack from './SingleTrack/index'
 
 import './TopTracks.css'
 
