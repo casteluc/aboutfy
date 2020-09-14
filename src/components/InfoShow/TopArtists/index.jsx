@@ -17,7 +17,7 @@ export default props => {
 
     return (
         <div className="top-artists">
-             <p>Os 5 artistas que você mais escutou na quarentena:</p>
+                <p>Os 5 artistas que você mais escutou na quarentena:</p>
 
             {topArtists.map( artist => {
                 count += 1
