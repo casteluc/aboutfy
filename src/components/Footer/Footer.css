@@ -10,13 +10,13 @@
 }
 
 .footer a {
-    color: #1DB954;
+    color: #2ebf91;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
 }
 
 .footer a:hover {
-    color: #1c9c49
+    color: #2aa37d
 }
 
