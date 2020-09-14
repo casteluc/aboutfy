@@ -34,7 +34,9 @@ export default props => {
         )
     } else {
         return (
-            <h1>Carregando...</h1>
+            <div className="loading">
+                <img src={require('../../../img/loading.svg')} alt=""/>
+            </div>
         )
     }
 }
