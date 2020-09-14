@@ -11,6 +11,10 @@
     transition: all 0.3s;
 }
 
+.tracks-loading {
+    margin: 50px 0;
+}
+
 @media only screen and (max-width: 480px) {
     .top-tracks > p {
         font-size: 1.125rem;

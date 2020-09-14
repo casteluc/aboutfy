@@ -10,6 +10,9 @@
     transition: all 0.3s;
 }
 
+.artists-loading {
+    margin: 50px 0;
+}
 @media only screen and (max-width: 480px) {
     .top-artists > p {
         font-size: 1.125rem;
