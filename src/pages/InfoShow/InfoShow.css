@@ -1,3 +1,10 @@
+.top-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
 .top-info-container {
     padding: 30px 20px 70px 20px;
     margin: 0 auto;
