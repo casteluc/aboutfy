@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/index'
 import TopArtists from '../../components/InfoShow/TopArtists/index'
 import TopTracks from '../../components/InfoShow/TopTracks/index'
 import UserInfo from '../../components/InfoShow/UserInfo/index'
+import { createPlaylist } from '../../services/apiServices'
 
 import "./InfoShow.css"
 
@@ -13,7 +14,10 @@ export default props => {
     const changeInfoType = (e) => {
         setInfoType(e.target.name)
     }
-
+    
+    const handleCreatePlaylist = () => {
+        createPlaylist(props.token)
+    }
     return (
         <div className="top-info">
             <div className="top-info-container">
@@ -21,7 +25,9 @@ export default props => {
 
                 {infoType === "tracks" ? <TopTracks token={props.token} /> : null}
                 {infoType === "artists" ? <TopArtists token={props.token} /> : null}
-                                
+
+                <button className="create-playlist" onClick={handleCreatePlaylist}>Criar playlist</button>
+
                 <div className="info-type-buttons">
                     <button className="info-type-button" name="tracks" onClick={changeInfoType}>
                         Ver por músicas

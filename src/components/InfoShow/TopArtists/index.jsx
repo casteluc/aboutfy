@@ -16,11 +16,7 @@ export default props => {
             setIsLoaded(true)
         }
     }, [props.token])
-
-    const handleCreatePlaylist = () => {
-        createPlaylist(props.token)
-    }
-
+    
     if (isLoaded) {
         return (
             <div className="top-artists">
@@ -33,7 +29,6 @@ export default props => {
                     )
                 })}
 
-                <button className="create-playlist" onClick={handleCreatePlaylist}>Criar playlist</button>
             </div>
         )
     } else {
