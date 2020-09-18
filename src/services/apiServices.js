@@ -66,7 +66,9 @@ export function getAllTracks(token, setAllTracks) {
     })
 }
 
-export async function createPlaylist(token) {
+export async function createPlaylist(token, setLoading, setReady) {
+    setLoading(true)
+
     let axiosConfig = {
         "headers": {
             "Authorization": 'Bearer ' + token
@@ -106,6 +108,7 @@ export async function createPlaylist(token) {
 
     await app.post(`/playlists/${playlistId}/tracks`, addTrackBody, axiosConfig)
         .then( response => {
-            alert("Playlist criada com sucesso")
         })
+
+    setReady(true)
 }

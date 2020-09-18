@@ -57,6 +57,12 @@
 .modal-main .cancel:hover {
     background-color: #4c5353;
 }
+
+.create-playlist-modal .loading {
+    display: flex;
+    flex-direction: column;
+}
+
 .display-block {
     display: block;
 }
