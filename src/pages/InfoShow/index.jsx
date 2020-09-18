@@ -29,11 +29,11 @@ export default props => {
                 <button className="create-playlist" onClick={handleCreatePlaylist}>Criar playlist</button>
 
                 <div className="info-type-buttons">
-                    <button className="info-type-button" name="tracks" onClick={changeInfoType}>
+                    <button className={`info-type-button ${infoType === "tracks" ? "selected" : ""}`} name="tracks" onClick={changeInfoType}>
                         Ver por músicas
                     </button>
 
-                    <button className="info-type-button" name="artists" onClick={changeInfoType}>
+                    <button className={`info-type-button ${infoType === "artists" ? "selected" : ""}`} name="artists" onClick={changeInfoType}>
                         Ver por artistas
                     </button>
                 </div>

@@ -31,6 +31,7 @@
     font-family: Poppins, sans-serif;
     font-weight: 700;
     margin: 0 5px 10px 5px;
+    transition: all 0.2s;
 }
 
 .info-type-button:hover {
@@ -38,6 +39,9 @@
     color: #222;
 }
 
+.info-type-button:active {
+    background-color: #aaa;
+}
 .create-playlist {
     font-family: Poppins, sans-serif;
     display: flex;
@@ -62,6 +66,11 @@
 
 .create-playlist:active {
     background-color:  rgba(46, 191, 145, 0.2);
+}
+
+.selected {
+    background-color: #cdcdcd;
+    color: #222;
 }
 
 @media only screen and (max-width: 480px) {
