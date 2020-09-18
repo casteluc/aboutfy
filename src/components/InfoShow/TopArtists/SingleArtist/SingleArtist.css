@@ -7,6 +7,7 @@
     margin: 20px auto;
     box-shadow: 2px 2px 7px #444;
     max-width: 500px;
+    transition: all 0.3s;
 }
 
 .single-artist p:first-of-type {
@@ -29,6 +30,10 @@
     font-weight: 600;
 }
 
+.single-artist:hover {
+    box-shadow: 3px 3px 10px #333;
+    cursor: pointer;
+}
 @media only screen and (max-width: 480px) {
     .single-artist p:first-of-type {
         font-size: 1.125rem;

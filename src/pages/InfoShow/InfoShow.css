@@ -33,6 +33,11 @@
     margin: 0 5px 10px 5px;
 }
 
+.info-type-button:hover {
+    background-color: #cdcdcd;
+    color: #222;
+}
+
 .create-playlist {
     font-family: Poppins, sans-serif;
     display: flex;
@@ -48,6 +53,15 @@
     box-shadow: 2px 2px 7px #444;
     width: 100%;
     max-width: 500px;
+    transition: all 0.3s;
+}
+
+.create-playlist:hover {
+    background-color:  rgba(46, 191, 145, 0.8);
+} 
+
+.create-playlist:active {
+    background-color:  rgba(46, 191, 145, 0.2);
 }
 
 @media only screen and (max-width: 480px) {
