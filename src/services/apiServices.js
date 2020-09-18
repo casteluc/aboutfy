@@ -97,7 +97,6 @@ export async function createPlaylist(token) {
 
     await app.post(`/users/${userId}/playlists`, playlistBody, axiosConfig)
         .then( response => {
-            console.log(response.data)
             playlistId = response.data.id
         })
     
@@ -106,6 +105,4 @@ export async function createPlaylist(token) {
     }
 
     await app.post(`/playlists/${playlistId}/tracks`, addTrackBody, axiosConfig)
-
-    console.log(userId)
 }

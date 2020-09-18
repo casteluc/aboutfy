@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getTopArtists } from '../../../services/apiServices'
+import { getTopArtists, createPlaylist } from '../../../services/apiServices'
 
 import SingleArtist from './SingleArtist/index'
 
@@ -17,6 +17,10 @@ export default props => {
         }
     }, [props.token])
 
+    const handleCreatePlaylist = () => {
+        createPlaylist(props.token)
+    }
+
     if (isLoaded) {
         return (
             <div className="top-artists">
@@ -29,7 +33,7 @@ export default props => {
                     )
                 })}
 
-                <button className="create-playlist">Criar playlist</button>
+                <button className="create-playlist" onClick={handleCreatePlaylist}>Criar playlist</button>
             </div>
         )
     } else {
