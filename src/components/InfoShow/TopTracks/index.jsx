@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getTopTracks } from '../../../services/apiServices'
+import { getTopTracks, createPlaylist } from '../../../services/apiServices'
 
 import SingleTrack from './SingleTrack/index'
 
@@ -17,7 +17,7 @@ export default props => {
         }
     }, [props.token])
 
-    const createPlaylist = () => {
+    const handleCreatePlaylist = () => {
         createPlaylist(props.token)
     }
 
@@ -33,7 +33,7 @@ export default props => {
                     )
                 })}
 
-                <button className="create-playlist" onClick={createPlaylist}>Criar playlist</button>
+                <button className="create-playlist" onClick={handleCreatePlaylist}>Criar playlist</button>
             </div>
         )
     } else {

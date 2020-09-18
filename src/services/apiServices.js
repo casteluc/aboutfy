@@ -30,8 +30,6 @@ export function getTopTracks(token, setTopTracks) {
     app.get(`/me/top/tracks?time_range=${timeRange}&limit=${limit}`, axiosConfig)
         .then( response => {
             setTopTracks(response.data.items)
-            console.log(response.data)
-            console.log("teste")
     })
 }
 
@@ -59,11 +57,55 @@ export function getAllTracks(token, setAllTracks) {
     }
 
     let timeRange = "medium_term"
-    let limit = 50
+    let limit = 5
 
     app.get(`/me/top/tracks?time_range=${timeRange}&limit=${limit}`, axiosConfig)
         .then( response => {
             setAllTracks(response.data.items)
             console.log(response.data.items)
     })
+}
+
+export async function createPlaylist(token) {
+    let axiosConfig = {
+        "headers": {
+            "Authorization": 'Bearer ' + token
+        }
+    }
+
+    let tracks = []
+    let userId
+    let playlistId
+
+    await app.get("/me", axiosConfig)
+        .then( response => {
+            userId = response.data.id
+        })
+
+    await app.get(`/me/top/tracks?time_range=medium_term&limit=50`, axiosConfig)
+        .then( response => {
+            response.data.items.forEach( track => {
+                tracks.push(track.uri)
+            })
+        })
+    
+    let playlistBody = {
+        "name": "Mais Escutadas da Quarentena",
+        "description": "Playlists com as minhas músicas mais escutadas durante a quarentena",
+        "public": true
+    }
+
+    await app.post(`/users/${userId}/playlists`, playlistBody, axiosConfig)
+        .then( response => {
+            console.log(response.data)
+            playlistId = response.data.id
+        })
+    
+    let addTrackBody = {
+        "uris": tracks
+    }
+
+    await app.post(`/playlists/${playlistId}/tracks`, addTrackBody, axiosConfig)
+
+    console.log(userId)
 }
