@@ -21,7 +21,7 @@ export default props => {
 
                 {infoType === "tracks" ? <TopTracks token={props.token} /> : null}
                 {infoType === "artists" ? <TopArtists token={props.token} /> : null}
-                
+                                
                 <div className="info-type-buttons">
                     <button className="info-type-button" name="tracks" onClick={changeInfoType}>
                         Ver por músicas

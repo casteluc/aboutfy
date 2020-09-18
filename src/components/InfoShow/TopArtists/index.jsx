@@ -20,7 +20,7 @@ export default props => {
     if (isLoaded) {
         return (
             <div className="top-artists">
-                    <p>Os 5 artistas que você mais escutou na quarentena:</p>
+                <p>Os 5 artistas que você mais escutou na quarentena:</p>
     
                 {topArtists.map( artist => {
                     count += 1
@@ -28,6 +28,8 @@ export default props => {
                         <SingleArtist key={artist.id} artist={artist} number={count}/>
                     )
                 })}
+
+                <button className="create-playlist">Criar playlist</button>
             </div>
         )
     } else {

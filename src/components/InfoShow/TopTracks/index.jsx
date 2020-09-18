@@ -17,6 +17,10 @@ export default props => {
         }
     }, [props.token])
 
+    const createPlaylist = () => {
+        createPlaylist(props.token)
+    }
+
     if (isLoaded) {
         return (
             <div className="top-tracks">
@@ -28,6 +32,8 @@ export default props => {
                         <SingleTrack key={track.id} track={track} number={count}/>
                     )
                 })}
+
+                <button className="create-playlist" onClick={createPlaylist}>Criar playlist</button>
             </div>
         )
     } else {
