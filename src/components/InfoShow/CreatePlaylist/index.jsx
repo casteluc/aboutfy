@@ -17,9 +17,9 @@ export default function CreatePlaylist(props) {
         setLoading(false)
         setReady(false)
     }
-    
+
     const notLoadingComponent = <> 
-        <p>Você deseja criar a playlist "Mais Escutdas da Quarentena" na sua conta do Spotify?</p>
+        <p>Você deseja criar a playlist "Mais Escutadas da Quarentena" na sua conta do Spotify?</p>
         <button className="create-playlist" onClick={handleCreatePlaylist}>Criar playlist</button>
         <button className="cancel" onClick={handleClose}>Cancelar</button>
     </>
