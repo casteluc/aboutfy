@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { getTopArtists, createPlaylist } from '../../../../services/apiServices'
+import { getTopArtists} from '../../../../services/apiServices'
 
-import SingleArtist from '../SingleArtist/index'
+import SingleArtist from '../SingleArtist'
 
 import './TopArtists.css'
 

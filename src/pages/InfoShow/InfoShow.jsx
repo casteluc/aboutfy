@@ -1,14 +1,14 @@
 import React, { useState} from 'react'
 
-import Footer from '../../components/Footer/index'
+import Footer from '../../components/Footer'
 import TopArtists from '../../components/InfoShow/Artists/TopArtists'
-import TopTracks from '../../components/InfoShow/TopTracks'
+import TopTracks from '../../components/InfoShow/Tracks/TopTracks'
 import UserInfo from '../../components/InfoShow/UserInfo'
 import CreatePlaylist from '../../components/InfoShow/CreatePlaylist'
 
 import "./InfoShow.css"
 
-export default function InfoShow() {
+export default function InfoShow({token}) {
     const [infoType, setInfoType] = useState("tracks")
     const [canShow, setCanShow] = useState(false)
 
@@ -22,14 +22,14 @@ export default function InfoShow() {
     return (
         <div className="top-info">
             <div className="top-info-container">
-                <UserInfo token={props.token}/>
+                <UserInfo token={token}/>
 
-                {infoType === "tracks" ? <TopTracks token={props.token} /> : null}
-                {infoType === "artists" ? <TopArtists token={props.token} /> : null}
+                {infoType === "tracks" ? <TopTracks token={token} /> : null}
+                {infoType === "artists" ? <TopArtists token={token} /> : null}
 
                 <button className="create-playlist" onClick={showModal}>Criar playlist</button>
 
-                <CreatePlaylist canShow={canShow} hideModal={hideModal} token={props.token}/>
+                <CreatePlaylist canShow={canShow} hideModal={hideModal} token={token}/>
                 
                 <div className="info-type-buttons">
                     <button className={`info-type-button ${infoType === "tracks" ? "selected" : ""}`} name="tracks" onClick={changeInfoType}>

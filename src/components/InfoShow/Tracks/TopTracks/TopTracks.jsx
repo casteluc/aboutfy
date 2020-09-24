@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { getTopTracks, createPlaylist } from '../../../services/apiServices'
+import { getTopTracks } from '../../../../services/apiServices'
 
-import SingleTrack from './SingleTrack/index'
+import SingleTrack from '../SingleTrack'
 
 import './TopTracks.css'
 
