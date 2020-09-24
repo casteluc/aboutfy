@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react'
-import { getTopArtists, createPlaylist } from '../../../services/apiServices'
+import { getTopArtists, createPlaylist } from '../../../../services/apiServices'
 
-import SingleArtist from './SingleArtist/index'
+import SingleArtist from '../SingleArtist/index'
 
 import './TopArtists.css'
 
-export default props => {
+export default function TopArtists({token}) {
     const [topArtists, setTopArtists] = useState([])
     const [isLoaded, setIsLoaded] = useState(false)
     var count = 0
 
     useEffect(() => {
-        if (props.token) {
-            getTopArtists(props.token, setTopArtists)
+        if (token) {
+            getTopArtists(token, setTopArtists)
             setIsLoaded(true)
         }
-    }, [props.token])
+    }, [token])
     
     if (isLoaded) {
         return (

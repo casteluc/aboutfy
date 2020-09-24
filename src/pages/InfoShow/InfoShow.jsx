@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 
 import Footer from '../../components/Footer/index'
-import TopArtists from '../../components/InfoShow/TopArtists'
+import TopArtists from '../../components/InfoShow/Artists/TopArtists'
 import TopTracks from '../../components/InfoShow/TopTracks'
 import UserInfo from '../../components/InfoShow/UserInfo'
 import CreatePlaylist from '../../components/InfoShow/CreatePlaylist'
