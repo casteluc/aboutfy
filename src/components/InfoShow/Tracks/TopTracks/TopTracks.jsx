@@ -5,17 +5,17 @@ import SingleTrack from './SingleTrack/index'
 
 import './TopTracks.css'
 
-export default props => {
+export default function TopTracks({token}) {
     const [topTracks, setTopTracks] = useState([])
     const [isLoaded, setIsLoaded] = useState(false)
     var count = 0
 
     useEffect(() => {
-        if (props.token) {
-            getTopTracks(props.token, setTopTracks)
+        if (token) {
+            getTopTracks(token, setTopTracks)
             setIsLoaded(true)
         }
-    }, [props.token])
+    }, [token])
 
     if (isLoaded) {
         return (

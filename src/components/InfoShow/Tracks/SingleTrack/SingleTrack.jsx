@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 
 import './SingleTrack.css'
 
-export default props => {
-    const trackImageURL = props.track.album.images[0].url
-    const trackName = props.track.name
-    const trackArtist = props.track.artists[0].name
+export default function SingleTrack({track, number}) {
+    const trackImageURL = track.album.images[0].url
+    const trackName = track.name
+    const trackArtist = track.artists[0].name
     
     return (
         <div className="single-track">
-            <p>{props.number}</p>
+            <p>{number}</p>
 
             <img src={trackImageURL} alt=""/>
 
