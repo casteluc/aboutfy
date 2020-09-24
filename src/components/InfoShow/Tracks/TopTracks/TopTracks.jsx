@@ -33,7 +33,7 @@ export default function TopTracks({token}) {
     } else {
         return (
             <div className="loading tracks-loading">
-                <img src={require('../../../img/loading.svg')} alt=""/>
+                <img src={require('../../../../img/loading.svg')} alt=""/>
             </div>
         )
     }

@@ -4,7 +4,7 @@ import { createPlaylist } from '../../../services/apiServices'
 
 import './CreatePlaylist.css'
 
-export default function CreatePlaylist({token, canShow}) {
+export default function CreatePlaylist({token, canShow, hideModal}) {
     const toggleClass = canShow ? "create-playlist-modal display-block" : "create-playlist-modal display-none";
     const [loading, setLoading] = useState(false)
     const [ready, setReady] = useState(false)
@@ -14,7 +14,7 @@ export default function CreatePlaylist({token, canShow}) {
     }
 
     const handleClose = () => {
-        props.hideModal()
+        hideModal()
         setLoading(false)
         setReady(false)
     }

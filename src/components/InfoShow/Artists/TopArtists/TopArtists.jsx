@@ -34,7 +34,7 @@ export default function TopArtists({token}) {
     } else {
         return (
             <div className="loading artists-loading">
-                <img src={require('../../../img/loading.svg')} alt=""/>
+                <img src={require('../../../../img/loading.svg')} alt=""/>
             </div>
         )
     }
