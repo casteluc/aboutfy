@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 
 import Footer from '../../components/Footer/index'
 import TopArtists from '../../components/InfoShow/TopArtists'
 import TopTracks from '../../components/InfoShow/TopTracks'
 import UserInfo from '../../components/InfoShow/UserInfo'
 import CreatePlaylist from '../../components/InfoShow/CreatePlaylist'
+
 import "./InfoShow.css"
 
-export default props => {
+export default function InfoShow() {
     const [infoType, setInfoType] = useState("tracks")
     const [canShow, setCanShow] = useState(false)
 
