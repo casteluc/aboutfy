@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 
 import { createPlaylist } from '../../../services/apiServices'
+
 import './CreatePlaylist.css'
 
-export default function CreatePlaylist(props) {
-    const toggleClass = props.canShow ? "create-playlist-modal display-block" : "create-playlist-modal display-none";
+export default function CreatePlaylist({token, canShow}) {
+    const toggleClass = canShow ? "create-playlist-modal display-block" : "create-playlist-modal display-none";
     const [loading, setLoading] = useState(false)
     const [ready, setReady] = useState(false)
 
     const handleCreatePlaylist = async () => {
-        createPlaylist(props.token, setLoading, setReady)
+        createPlaylist(token, setLoading, setReady)
     }
 
     const handleClose = () => {
