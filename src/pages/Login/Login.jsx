@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/index'
 
 import "./Login.css"
 
-export default props => {
+export default function Login() {
 
     return (
         <div className="login">

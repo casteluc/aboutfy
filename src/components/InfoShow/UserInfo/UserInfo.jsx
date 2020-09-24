@@ -3,7 +3,7 @@ import { getCurrentUser } from '../../../services/apiServices'
 
 import './UserInfo.css'
 
-export default props => {
+export default function UserInfo({token}) {
     const [profileImageURL, setProfileImageURL] = useState("")
     const [user, setUser] = useState({})
     const [isLoaded, setIsLoaded] = useState(false)
@@ -16,10 +16,10 @@ export default props => {
     }, [user])
 
     useEffect(() => {
-        if (props.token) {
-          getCurrentUser(props.token, setUser)
+        if (token) {
+          getCurrentUser(token, setUser)
         }
-    }, [props.token])
+    }, [token])
 
     if (isLoaded) {
         return (
