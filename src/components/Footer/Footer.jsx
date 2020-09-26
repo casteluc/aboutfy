@@ -1,12 +1,12 @@
 import React from 'react'
 
-import './Footer.css'
+import { Container } from './FooterStyle'
 
 export default function Footer() {
 
     return (
-        <footer className="footer">
+        <Container className="footer">
             <p>&copy; Desenvolvido por <a href="https://www.instagram.com/casteluc/">@casteluc</a></p>
-        </footer>
+        </Container>
     )
 }

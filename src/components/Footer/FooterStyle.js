@@ -1,19 +1,20 @@
-.footer {
+import styled from 'styled-components'
+
+export const Container = styled.footer`
     text-align: center;
     background-color: #22222233;
     margin-top: auto;
     padding: 10px;
     color: #fafafa;
-}
 
-.footer a {
+    a {
     color: #2ebf91;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
-}
+    }
 
-.footer a:hover {
-    color: #2aa37d
-}
-
+    a:hover {
+        color: #2aa37d
+    }
+`
