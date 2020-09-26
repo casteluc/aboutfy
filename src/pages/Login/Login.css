@@ -14,15 +14,3 @@
     flex-direction: column;
     align-items: center;
 }
-
-/* ------------------------- LOGIN TEXT ----------------------------- */
-.login-text {
-    text-align: center;
-}
-
-.login-text h2 {
-    color: #fafafa;
-    font-size: 1.875rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
