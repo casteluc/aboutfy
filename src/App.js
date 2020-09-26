@@ -15,9 +15,9 @@ function App() {
     }, [])
 
     return (
-        <div className="app">
+        <>
             {token ?  <InfoShow token={token} /> : <Login />}
-        </div>    
+        </>    
     );
 }
 
