@@ -7,8 +7,6 @@ import UserInfo from '../../components/InfoShow/UserInfo'
 import CreatePlaylist from '../../components/InfoShow/CreatePlaylist'
 import { Container, Content, Buttons, CreatePlaylistButton } from './InfoShowStyle'
 
-import "./InfoShow.css"
-
 export default function InfoShow({token}) {
     const [infoType, setInfoType] = useState("tracks")
     const [canShow, setCanShow] = useState(false)
