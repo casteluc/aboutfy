@@ -5,6 +5,7 @@ import TopArtists from '../../components/InfoShow/Artists/TopArtists'
 import TopTracks from '../../components/InfoShow/Tracks/TopTracks'
 import UserInfo from '../../components/InfoShow/UserInfo'
 import CreatePlaylist from '../../components/InfoShow/CreatePlaylist'
+import { Container, Content, Buttons, CreatePlaylistButton } from './InfoShowStyle'
 
 import "./InfoShow.css"
 
@@ -20,18 +21,18 @@ export default function InfoShow({token}) {
     }
 
     return (
-        <div className="top-info">
-            <div className="top-info-container">
+        <Container>
+            <Content>
                 <UserInfo token={token}/>
 
                 {infoType === "tracks" ? <TopTracks token={token} /> : null}
                 {infoType === "artists" ? <TopArtists token={token} /> : null}
 
-                <button className="create-playlist" onClick={showModal}>Criar playlist</button>
+                <CreatePlaylistButton onClick={showModal}>Criar playlist</CreatePlaylistButton>
 
                 <CreatePlaylist canShow={canShow} hideModal={hideModal} token={token}/>
                 
-                <div className="info-type-buttons">
+                <Buttons>
                     <button className={`info-type-button ${infoType === "tracks" ? "selected" : ""}`} name="tracks" onClick={changeInfoType}>
                         Ver por músicas
                     </button>
@@ -39,10 +40,10 @@ export default function InfoShow({token}) {
                     <button className={`info-type-button ${infoType === "artists" ? "selected" : ""}`} name="artists" onClick={changeInfoType}>
                         Ver por artistas
                     </button>
-                </div>
-            </div>
+                </Buttons>
+            </Content>
 
             <Footer />
-        </div>
+        </Container>
     )
 }
