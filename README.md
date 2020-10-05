@@ -1,5 +1,6 @@
 # Aboutfy
-Aboutfy is a React Web App that consumes Spotify API and shows the user's musical preferences.
+Aboutfy is a React Web App that consumes Spotify API and shows the user's musical preferences.\
+**[Click here to see the app running.](https://aboutfy.herokuapp.com/)**
 
 The backend OAuth server was provided by [Mattias Johansson](https://github.com/mpj) and you
 can find it [here](https://github.com/mpj/oauth-bridge-template).
