@@ -5,7 +5,9 @@ Aboutfy is a React Web App that consumes Spotify API and shows the user's musica
 The backend OAuth server was provided by [Mattias Johansson](https://github.com/mpj) and you
 can find it [here](https://github.com/mpj/oauth-bridge-template).
 
-## Executing
+![Aboutfy gif](https://github.com/casteluc/aboutfy/blob/master/aboutfy-gif.gif)
+
+## Executing locally
 You are able to run this project locally on your machine, despite **the only screen that you will be able to access
 is the login page**, you won't be allowed to actually login in spotify and see the whole application working.
 For doing so, just execute this on the terminal:
