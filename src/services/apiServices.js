@@ -24,7 +24,7 @@ export function getTopTracks(token, setTopTracks) {
         }
     }
 
-    let timeRange = "medium_term"
+    let timeRange = "long_term"
     let limit = 5
 
     app.get(`/me/top/tracks?time_range=${timeRange}&limit=${limit}`, axiosConfig)
@@ -40,7 +40,7 @@ export function getTopArtists(token, setTopArtists) {
         }
     }
 
-    let timeRange = "medium_term"
+    let timeRange = "long_term"
     let limit = 5
 
     app.get(`/me/top/artists?time_range=${timeRange}&limit=${limit}`, axiosConfig)
@@ -56,7 +56,7 @@ export function getAllTracks(token, setAllTracks) {
         }
     }
 
-    let timeRange = "medium_term"
+    let timeRange = "long_term"
     let limit = 5
 
     app.get(`/me/top/tracks?time_range=${timeRange}&limit=${limit}`, axiosConfig)
@@ -84,7 +84,7 @@ export async function createPlaylist(token, setLoading, setReady) {
             userId = response.data.id
         })
 
-    await app.get(`/me/top/tracks?time_range=medium_term&limit=50`, axiosConfig)
+    await app.get(`/me/top/tracks?time_range=long_term&limit=50`, axiosConfig)
         .then( response => {
             response.data.items.forEach( track => {
                 tracks.push(track.uri)
